@@ -1,0 +1,33 @@
+
+→ Estruturando o Banco de Dados: 
+Usuários: 
+id (PK);
+nome;
+email (único);
+senha (hashed);
+tipo (administrador, usuário).
+
+
+
+Denúncias:
+id (PK);
+id_usuario (FK para usuarios);
+tipo_problema;
+descricao;
+localizacao;
+data_criacao;
+status (aberta, fechada);
+data_solucao (nullable).
+
+Comentários:
+id (PK);
+id_denuncia (FK para denuncias);
+id_usuario (FK para usuarios);
+comentario;
+data_comentario.
+
+Curtidas:
+id (PK);
+id_denuncia (FK para denuncias);
+id_usuario (FK para usuarios);
+data_curtida.
